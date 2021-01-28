@@ -1,0 +1,19 @@
+Universe     = vanilla
+	       executable = exec.sh
+               should_transfer_files = YES
+               transfer_input_files = condor_tensorflow.py
+               transfer_output_files = ""
+	       GetEnv       = True
+	       input = /dev/null                       			
+	       output = /work/USERNAME/condor_gpu_test/$(Cluster)_$(Process).out
+               error = /work/USERNAME/condor_gpu_test/$(Cluster)_$(Process).err
+               log = /work/USERNAME/condor_gpu_test/$(Cluster)_$(Process).log
+               Requirements = BOSCOGroup == "bosco_reserve" && BOSCOCluster == "ce03.cmsaf.mit.edu" 
+               arguments = $(Process)
+               +AccountingGroup = "group_cmsuser.USERNAME"
+               use_x509userproxy = 1
+               OnExitHold = ( ExitBySignal == true ) || ( ExitCode != 0 )
+               x509userproxy = /tmp/x509up_uUSERID
+               queue 1
+
+
