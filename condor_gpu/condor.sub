@@ -10,10 +10,7 @@ Universe     = vanilla
                log = /work/USERNAME/condor_gpu_test/$(Cluster)_$(Process).log
                Requirements = BOSCOGroup == "bosco_reserve" && BOSCOCluster == "ce03.cmsaf.mit.edu" 
                arguments = $(Process)
-               +AccountingGroup = "group_cmsuser.USERNAME"
-               use_x509userproxy = 1
                OnExitHold = ( ExitBySignal == true ) || ( ExitCode != 0 )
-               x509userproxy = /tmp/x509up_uUSERID
                queue 1
 
 
