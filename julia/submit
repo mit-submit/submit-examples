@@ -1,0 +1,31 @@
+# Submit description file for square.pl program
+#----------------------------------------------
+Executable            = run
+#Requirements          = regexp("T2.*", MACHINE)
+Universe              = vanilla
+GetEnv                = True
+#initialdir            = /tmp
+transfer_input_files  = square.jl,input
+should_transfer_files = YES
+WhenToTransferOutput  = ON_EXIT_OR_EVICT
+Log                   = square.log
+Arguments             = square.jl 1
+transfer_output_files = square_1.result
+Output                = square_1.out
+Error                 = square_1.err
+Queue
+Arguments             = square.jl 2
+transfer_output_files = square_2.result
+Output                = square_2.out
+Error                 = square_2.err
+Queue
+Arguments             = square.jl 3
+transfer_output_files = square_3.result
+Output                = square_3.out
+Error                 = square_3.err
+Queue
+Arguments             = square.jl 4
+transfer_output_files = square_4.result
+Output                = square_4.out
+Error                 = square_4.err
+Queue

@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+#
+import os,sys
+
+min = int(sys.argv[1])
+max = int(sys.argv[2])
+
+os.system("cat base_sub > submit")
+
+with open("submit","a") as fH:
+    for i in range(min,max+1,1):
+        id = str(i)
+        fH.write("Arguments             = %s\n"%(id))
+        fH.write("transfer_output_files = matrix_product_states_%s.mat\n"%(id))
+        fH.write("Output                = matrix_product_states_%s.out\n"%(id))
+        fH.write("Error                 = matrix_product_states_%s.err\n"%(id))
+        fH.write("Queue\n")

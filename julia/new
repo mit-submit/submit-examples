@@ -1,0 +1,5 @@
+rm *.err *.out *.log *.result
+./generate_sub 1 4
+condor_submit submit
+
+condor_q

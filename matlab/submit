@@ -1,0 +1,87 @@
+#####################################################
+# Submit description file for doSomething.pl program
+#####################################################
+Executable            = matrix_product_states.py
+#Requirements          = regexp("T2.*", MACHINE)
+Universe              = vanilla
+GetEnv                = True
+#initialdir            = /tmp
+transfer_input_files  = matrix_product_states.m-template
+should_transfer_files = YES
+WhenToTransferOutput  = ON_EXIT_OR_EVICT
+Log                   = matrix_product_states.log
+Arguments             = 1
+transfer_output_files = matrix_product_states_1.mat
+Output                = matrix_product_states_1.out
+Error                 = matrix_product_states_1.err
+Queue
+Arguments             = 2
+transfer_output_files = matrix_product_states_2.mat
+Output                = matrix_product_states_2.out
+Error                 = matrix_product_states_2.err
+Queue
+Arguments             = 3
+transfer_output_files = matrix_product_states_3.mat
+Output                = matrix_product_states_3.out
+Error                 = matrix_product_states_3.err
+Queue
+Arguments             = 4
+transfer_output_files = matrix_product_states_4.mat
+Output                = matrix_product_states_4.out
+Error                 = matrix_product_states_4.err
+Queue
+Arguments             = 5
+transfer_output_files = matrix_product_states_5.mat
+Output                = matrix_product_states_5.out
+Error                 = matrix_product_states_5.err
+Queue
+Arguments             = 6
+transfer_output_files = matrix_product_states_6.mat
+Output                = matrix_product_states_6.out
+Error                 = matrix_product_states_6.err
+Queue
+Arguments             = 7
+transfer_output_files = matrix_product_states_7.mat
+Output                = matrix_product_states_7.out
+Error                 = matrix_product_states_7.err
+Queue
+Arguments             = 8
+transfer_output_files = matrix_product_states_8.mat
+Output                = matrix_product_states_8.out
+Error                 = matrix_product_states_8.err
+Queue
+Arguments             = 9
+transfer_output_files = matrix_product_states_9.mat
+Output                = matrix_product_states_9.out
+Error                 = matrix_product_states_9.err
+Queue
+Arguments             = 10
+transfer_output_files = matrix_product_states_10.mat
+Output                = matrix_product_states_10.out
+Error                 = matrix_product_states_10.err
+Queue
+Arguments             = 11
+transfer_output_files = matrix_product_states_11.mat
+Output                = matrix_product_states_11.out
+Error                 = matrix_product_states_11.err
+Queue
+Arguments             = 12
+transfer_output_files = matrix_product_states_12.mat
+Output                = matrix_product_states_12.out
+Error                 = matrix_product_states_12.err
+Queue
+Arguments             = 13
+transfer_output_files = matrix_product_states_13.mat
+Output                = matrix_product_states_13.out
+Error                 = matrix_product_states_13.err
+Queue
+Arguments             = 14
+transfer_output_files = matrix_product_states_14.mat
+Output                = matrix_product_states_14.out
+Error                 = matrix_product_states_14.err
+Queue
+Arguments             = 15
+transfer_output_files = matrix_product_states_15.mat
+Output                = matrix_product_states_15.out
+Error                 = matrix_product_states_15.err
+Queue

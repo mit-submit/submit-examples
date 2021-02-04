@@ -1,0 +1,63 @@
+# Submit description file for square.pl program
+#----------------------------------------------
+Executable            = run
+#Requirements          = regexp("T2.*", MACHINE)
+Universe              = vanilla
+GetEnv                = True
+#initialdir            = /tmp
+transfer_input_files  = electron-demo.mac
+should_transfer_files = YES
+WhenToTransferOutput  = ON_EXIT_OR_EVICT
++SingularityImage     = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest"
+
+Log                   = electron-demo.log
+Arguments             = electron-demo.mac -s1
+transfer_output_files = electron-demo_1.root
+Output                = electron-demo_1.out
+Error                 = electron-demo_1.err
+Queue
+Arguments             = electron-demo.mac -s2
+transfer_output_files = electron-demo_2.root
+Output                = electron-demo_2.out
+Error                 = electron-demo_2.err
+Queue
+Arguments             = electron-demo.mac -s3
+transfer_output_files = electron-demo_3.root
+Output                = electron-demo_3.out
+Error                 = electron-demo_3.err
+Queue
+Arguments             = electron-demo.mac -s4
+transfer_output_files = electron-demo_4.root
+Output                = electron-demo_4.out
+Error                 = electron-demo_4.err
+Queue
+Arguments             = electron-demo.mac -s5
+transfer_output_files = electron-demo_5.root
+Output                = electron-demo_5.out
+Error                 = electron-demo_5.err
+Queue
+Arguments             = electron-demo.mac -s6
+transfer_output_files = electron-demo_6.root
+Output                = electron-demo_6.out
+Error                 = electron-demo_6.err
+Queue
+Arguments             = electron-demo.mac -s7
+transfer_output_files = electron-demo_7.root
+Output                = electron-demo_7.out
+Error                 = electron-demo_7.err
+Queue
+Arguments             = electron-demo.mac -s8
+transfer_output_files = electron-demo_8.root
+Output                = electron-demo_8.out
+Error                 = electron-demo_8.err
+Queue
+Arguments             = electron-demo.mac -s9
+transfer_output_files = electron-demo_9.root
+Output                = electron-demo_9.out
+Error                 = electron-demo_9.err
+Queue
+Arguments             = electron-demo.mac -s10
+transfer_output_files = electron-demo_10.root
+Output                = electron-demo_10.out
+Error                 = electron-demo_10.err
+Queue

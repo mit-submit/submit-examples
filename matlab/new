@@ -11,20 +11,14 @@
 #     well if you want of course some parameters. The submit file can be rather long and tedious to
 #     create, it is therefore a good idea to generate it.
 # 
-#  c) base_sub
-# 
-#     basic condor configuration file that applies to all jobs in this batch.
-#
 #  b) generate_sub
 # 
 #     this is a little script that will construct the configuration used for condor submission. The
 #     reason why you want to have a script to generate your submit file is that it is very repetitive
 #     and error prone to write those down explicitely, of course you can.
 # 
-#
-# The steps are roughly outlined below but use the 'new' script to re-run from scratch
+# The steps
 # 
-
 # start fresh (delete error, output and log files)
 rm *.err *.out *.log
 

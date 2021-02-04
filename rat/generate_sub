@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+import os,sys
+
+min = int(sys.argv[1])
+max = int(sys.argv[2])
+jobname = "electron-demo"
+
+os.system("cat base_sub | sed 's/XX-JOBNAME-XX/%s/' > submit"%(jobname))
+
+with open("submit","a") as fH:
+    for i in range(min,max+1,1):
+        id = str(i)
+        fH.write("Arguments             = %s.mac -s%s\n"%(jobname,id))
+        fH.write("transfer_output_files = %s_%s.root\n"%(jobname,id))
+        fH.write("Output                = %s_%s.out\n"%(jobname,id))
+        fH.write("Error                 = %s_%s.err\n"%(jobname,id))
+        fH.write("Queue\n")

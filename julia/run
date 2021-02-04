@@ -1,0 +1,30 @@
+#!/bin/bash
+#---------------------------------------------------------------------------------------------------
+#
+# Script to run julia. Likely you have some organizational work to do before you get to the true
+# julia command. Here is the place to do it.
+#
+#---------------------------------------------------------------------------------------------------
+
+# show my running environment
+echo ""; echo " ## Environment"
+env
+
+# show the directory
+echo ""; echo " ## Directory"
+pwd
+echo ""
+ls
+
+# show the arguments
+echo ""; echo " ## Arguments"
+echo $@
+
+# now let's do what we came for ($@ is just the full set of arguments provided to the run script)
+echo ""; echo " ## Julia: julia $@"
+julia $@
+
+# let's make sure we name our output correctly
+JOBID="${@: -1}"   # last value in the command line arguments
+echo ""; echo " ## Julia: mv output square_${JOBID}.result"
+mv output square_${JOBID}.result
