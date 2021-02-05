@@ -1,0 +1,12 @@
+YOU NEED TO CHANGE THE EXCECUTABLE DIR IN:
+-> submit.condor
+
+We want to run python_script.py which ouputs files in the output/ directory (outfile_XA.txt).
+
+>> python setup.py (generates the DAGMan in scratch dir)
+>> condor_submit_dag scratch/dag.submit (submits to cluster)
+
+Files will appear in the output/ directory. 
+
+
+
