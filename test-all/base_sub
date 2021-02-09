@@ -1,0 +1,11 @@
+# Submit description file for test_all program
+#----------------------------------------------
+Executable            = run
+#Requirements          = regexp("T2.*", MACHINE)
+Universe              = vanilla
+GetEnv                = True
+#initialdir            = /tmp
+#transfer_input_files  = input
+#should_transfer_files = YES
+#WhenToTransferOutput  = ON_EXIT_OR_EVICT
+Log                   = test-all.log
