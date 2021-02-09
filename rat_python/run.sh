@@ -5,7 +5,6 @@
 # rat command. Here is the place to do it.
 #
 #---------------------------------------------------------------------------------------------------
-JOBID="${@: -1}"   # last value in the command line arguments
 
 # Setup neutrino environment
 source /cvmfs/cvmfs.cmsaf.mit.edu/submit/work/paus/neutrinos/v00/setup.sh
@@ -26,8 +25,5 @@ echo $@
 
 # now let's do what we came for ($@ is just the full set of arguments provided to the run script)
 echo ""; echo " ## execute: rat $@"
-rat $@ -o electron-demo_${JOBID}.root
-
-# show the directory content
-echo ""; echo " ## Directory"
+rat $@
 ls -lhrt

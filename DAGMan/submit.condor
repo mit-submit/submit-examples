@@ -1,0 +1,19 @@
+Executable = /work/saxani/test/python_script.py
+Arguments = --input_float $(input_float) --outfile_name $(outfile_name)
+
+universe = vanilla
+output = /work/saxani/test/scratch/output-$(Cluster).out
+error  = /work/saxani/test/scratch/error-$(Cluster).err
+log    = /work/saxani/test/scratch/job-$(Cluster).log
+
+should_transfer_files = yes
+when_to_transfer_output = ON_EXIT
+initialdir = $(outfile_loc)
+
+notification = never
+getenv = True
+
+request_memory = 1000
+request_cpus = 1
+queue
+

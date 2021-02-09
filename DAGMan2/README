@@ -1,0 +1,15 @@
+YOU NEED TO CHANGE THE EXCECUTABLE DIR IN TWO FILES, see:
+-> submit.condor
+-> submit2.condor
+
+We want to run python_script.py which ouputs files in the output/ directory (outfile_XA.txt). 
+After that job is completed, we want to have python_script2.py, which simply opens the output
+files, multiplies the number inside by two, then makes a new file (outfile_XB.txt).  
+
+>> python setup.py (generates the DAGMan in scratch dir)
+>> condor_submit_dag scratch/dag.submit (submits to cluster)
+
+Files will appear in the output/ directory. First the PARENT job wil produce outfile_XA.txt,
+then once those complete the CHILD jobs run producing the outfile_XB.txt. 
+
+
