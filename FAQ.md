@@ -39,33 +39,32 @@ priorities at OSG are difficult to predict or how they compare to what you sugge
 
 One condor_submit script is the simplest and in many cases sufficient solution for your task. DAGman gives you more options but is also more complicated.
 
-### How do you guarantee the worker nodes you submit to have Julia installed?
+### How do you guarantee the worker nodes you submit to have my software (ex. Julia) installed?
 
-If some of the worker nodes do not have the proper software installed (ex. Julia) this needs to be brought to the attention of the system administrators so the problem can be fixed. This should not be the case though. A patch would be to submit twice as many jobs as needed to have enough output in case half fail or explicitely exclude the failing worker nodes by using the requirements.
+If some of the worker nodes do not have the proper software installed (ex. Julia) this needs to be brought to the attention of the system administrators so the problem can be fixed. This should not be the case though. A quick patch if this only applies to few machines, would be to submit twice as many jobs as needed to have enough output in case half fail or explicitely exclude the failing worker nodes by using the requirements.
 
-A much better solution is to use the [singularity image which has julia](https://support.opensciencegrid.org/support/solutions/articles/12000073449) installed. This means any machine will have Julia through the mounted CVMFS image. The main failure mode then would be that the CVMFS mount fails.
+A much better solution is to use a [singularity image which has your software installed (ex. julia)](https://support.opensciencegrid.org/support/solutions/articles/12000073449) installed. This means any machine will have your software (ex. Julia) through the mounted CVMFS image. The main failure mode then would be that the CVMFS mount fails.
 
 ### What happens if a job fails?
 
-Look at the error file -- this generally has enough info to debug
-Sometimes jobs fail for random reason -- just need to resubmit
-Can one resubmit a job automatically?
-Don’t want this to be automatic (could fall into infinite loop)
-Some software exists but is application-specific
-DAGman produces rescue file (can restart from failed state)
-A typical CMS Heavy Ion analysis workflow (Michael Joseph Peters)
-Working on subMIT for the Ricochet experiment (Dr. Valerian Sibille)
-Why do some jobs fail on certain machines?
-Some machines are 14 years old and don’t support SSE4 instructions
-The library might be copied to all machines but some machines don’t support the assembly instructions
-If the library is compiled with a more modern instruction set, it simply won’t run on old machines
-Using GEANT on subMIT (Dr. Spencer Axani)
-A Machine Learning application (Benedikt Maier)
-Who has access to the GPUs on subMIT?
-Anyone who has access to subMIT can submit to BOSCOGroup to get GPU access
-Seamless Full-Experiment Simulations with SubMIT (Johnston Robert)
+Look at the error file -- this generally has enough information to debug. Sometimes it is hard to track down what happens and a simple resubmission might do the trick.
 
-Open discussion session
+### Can one resubmit a job automatically?
+
+It is possible but you would not want this to be automatic because it could go into an infinite loop. Some software exists but is application-specific. DAGman produces rescue files and can restart from a failed state.
+
+### Why do some jobs fail on certain machines?
+
+Some machines are well over 10 yearss old and do not support SSE4 instructions. The library might be available on such old machines but it does no provide the assembly instructions needed to execute the given library. You can add a requirement for SSE4 instructions to be present on the workers were your job is executed:
+
+     requirements = has_sse4_1 && ...
+
+### Who has access to the GPUs on subMIT?
+
+Anyone who has access to subMIT can submit to BOSCOGroup to get GPU access
+
+
+
 Could there be an LNS Slack cluster channel to ask questions?
 Currently a Slack for subMIT with a help channel but not open to everyone yet
 We could make this open to everyone if there is interest
