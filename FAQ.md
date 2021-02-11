@@ -11,12 +11,14 @@ If needed we can set up a job to use order of 40 cores on one machine but this w
 “I want to say yes but am not 100% sure”
 Let’s try to do it, and if it doesn’t work, we can work on this to get it to work
 Should probably work but we should try this
-Does CVFMS have a local MIT server or global?
+
+### Does CVFMS have a local MIT server or global?
 These are both available
 Are WM allocated one per job, or is it possible that multiple jobs share the node
 One node can have multiple jobs run on it.  Each job runs in its own area so they don’t interfere
-The subMIT Cluster (Zhangqier Wang)
-You say there is a large data pool in hadoop.  Can we freely access this and store data there?
+
+### Can we freely access the large hadoop storage space?
+
 The disk is harder to deal with than CPUs
 Can always use idle CPU but cannot remove data from existing disk
 If you want a lot of disk space, buy it
@@ -25,18 +27,26 @@ LNS could probably fund a standard disk to use within reasonable limits
 Could buy a 10 TB disk for about $300 -- should not be a problem for experimental groups
 Need to figure out the landscape to see how much space there is available
 The space /mnt/T2_US_MIT/hadoop looks like a directory but is actually distributed over the network -- cannot write directly into it (and reading directly from it is bad)
-If one submits a job, by default, does it go to MIT T2 or potentially other centers such as OSG? Independently, when a job is submitted to OSG, does it have any higher priority compared to directly accessing OSG resource by their login nodes?
+
+### If one submits a job, by default, does it go to MIT T2 or potentially other centers such as OSG?
+
+### Independently, when a job is submitted to OSG, does it have any higher priority compared to directly accessing OSG resource by their login nodes?
+
 you can change which clusters you wanna access by changing a line in the condor submit requirements. you can also connect them with logical OR if you don’t care
 priorities at OSG are difficult to predict or how they compare to what you suggest to do (which I don’t exactly understand :) )
-Using julia on the Tier-2 (Prof. Wati Taylor)
-Is there a preference between using a submit script and a DAGman?
-Submit script is probably simplest
-DAGman gives more options but is more complicated
-How do you guarantee the worker nodes you submit to have Julia installed?
-Easy solution -- just submit twice as many jobs as needed (in case half fail)
-Last summer, about half of nodes didn’t run Julia but now most do
-Can also create a Singularity image with Julia installed (then any machine will have Julia through this image)
-What happens if a job fails?
+
+### Is there a preference between using a simple submit script and a DAGman?
+
+One condor_submit script is the simplest and in many cases sufficient solution for your task. DAGman gives you more options but is also more complicated.
+
+### How do you guarantee the worker nodes you submit to have Julia installed?
+
+If some of the worker nodes do not have the proper software installed (ex. Julia) this needs to be brought to the attention of the system administrators so the problem can be fixed. This should not be the case though. A patch would be to submit twice as many jobs as needed to have enough output in case half fail or explicitely exclude the failing worker nodes by using the requirements.
+
+A much better solution is to use the [singularity image which has julia](https://support.opensciencegrid.org/support/solutions/articles/12000073449) installed. This means any machine will have Julia through the mounted CVMFS image. The main failure mode then would be that the CVMFS mount fails.
+
+### What happens if a job fails?
+
 Look at the error file -- this generally has enough info to debug
 Sometimes jobs fail for random reason -- just need to resubmit
 Can one resubmit a job automatically?
