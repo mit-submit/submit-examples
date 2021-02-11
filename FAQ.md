@@ -2,16 +2,12 @@
 
 ### Does the subMIT setup support "MPI"?
 
-2 limitations to MPI
+The short answer to this question is no. There are two limitations to using MPI on the computing Tier-2 computing center at Bates. First, there is limited interconnectivity between worker nodes (typically 1 Gb/sec = "weak coupling") and secondly our batch system (HTCondor) does not support the allocation of several workernodes in parallel. Condor could be set up to use MPI but we don’t do this because MPI would not run efficiently.
 
-Limited interconnectivity between worker nodes (1 Gb/sec = “weak coupling”)
-Not really suited for using hardware in parallel
-To get 100 nodes, one would need to reserve 100 worker nodes and wait until all are free (this is inefficient)
-Condor could be set up to use MPI but we don’t do this
+If needed we can set up a job to use order of 40 cores on one machine but this would need to be carefully coordinated.
 
-Could set up a job to use 40 cores if necessary
+### Can one mount a Docker file via Singularity?
 
-Can one mount a Docker file via Singularity?
 “I want to say yes but am not 100% sure”
 Let’s try to do it, and if it doesn’t work, we can work on this to get it to work
 Should probably work but we should try this
