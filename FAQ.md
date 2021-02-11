@@ -1,5 +1,12 @@
 # Frequently Asked Question catalog
 
+The Tier-2 computing center is located at the High Performance Research Computing Facility at Bates. It is a resource with close to twenty thousand computing slots and about eight petabyte of storage space. The facility is mostly used by LHC experiments (CMS, LHCb) but some resources are available to the LNS community. Also other experiments, like CLAS12 recently, have bought hardware which is seamlessly included in the center. The maintance of the resources is taken care of at Bates. These resources can be accessed through the subMIT computing infrastructure, where jobs are prepared and submitted for execution.
+
+The [github repository](https://github.com/mit-submit/submit-examples) summarizes a number of simple examples and the presentations at our [recent workshop](https://indico.cern.ch/event/999848) go through a number in-depth examples of more experienced users and includes detailed explanation and discussion of applications of new or simply interested users.
+
+The workshop brought up a number of questions which we summarize here and will continue to maintain.
+
+
 ### Does the subMIT setup support "MPI"?
 
 The short answer to this question is no. There are two limitations to using MPI on the computing Tier-2 computing center at Bates. First, there is limited interconnectivity between worker nodes (typically 1 Gb/sec = "weak coupling") and secondly our batch system (HTCondor) does not support the allocation of several workernodes in parallel. Condor could be set up to use MPI but we don’t do this because MPI would not run efficiently.
