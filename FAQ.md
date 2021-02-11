@@ -2,7 +2,7 @@
 
 The Tier-2 computing center is located at the High Performance Research Computing Facility at Bates. It is a resource with close to twenty thousand computing slots and about eight petabyte of storage space. The facility is mostly used by LHC experiments (CMS, LHCb) but some resources are available to the LNS community. Also other experiments, like CLAS12 recently, have bought hardware which is seamlessly included in the center. The maintance of the resources is taken care of at Bates. These resources can be accessed through the subMIT computing infrastructure, where jobs are prepared and submitted for execution.
 
-The [github repository](https://github.com/mit-submit/submit-examples) summarizes a number of simple examples and the presentations at our [recent workshop](https://indico.cern.ch/event/999848) go through a number in-depth examples of more experienced users and includes detailed explanation and discussion of applications of new or simply interested users.
+The [github repository](https://github.com/mit-submit/submit-examples) summarizes a number of simple examples and the presentations at our [recent workshop](https://indico.cern.ch/event/999848) go through a number in-depth examples of more experienced users and include detailed explanation and discussion of applications of new or simply interested users.
 
 The workshop brought up a number of questions which we summarize here and will continue to maintain.
 
@@ -63,7 +63,7 @@ Generally worker nodes are supposed to be interchangable but sometimes they are 
 
 As an example, some of our machines are over 10 years old and do not support SSE4 instructions. The library might be available on such old machines but it does no provide the assembly instructions needed to execute the given library. You can add a requirement for SSE4 instructions to be present on the workers were your job is executed:
 
-     requirements = has_sse4_1 && ...
+   requirements = has_sse4_1 && ...
 
 ### Who has access to the GPUs on subMIT?
 
@@ -125,7 +125,7 @@ One can configure a part of the cluster where jobs accumulate on specific machin
 
 DAGman will do this [see Spencer’s talk](https://indico.cern.ch/event/999848/contributions/4208731/) I set the requirements as
 
-  requriements = BOSCOGroup == "bosco_reserve" && BOSCOCluster == "ce03.cmsaf.mit.edu"
+       requirements = BOSCOGroup == "bosco_reserve" && BOSCOCluster == "ce03.cmsaf.mit.edu"
 
 and use the GPU example “condor_tensorflow.py”. I got “lbgpu0001.cmsaf.mit.edu \n False”.
 
