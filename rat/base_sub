@@ -8,6 +8,6 @@ GetEnv                = True
 transfer_input_files  = XX-JOBNAME-XX.mac
 should_transfer_files = YES
 WhenToTransferOutput  = ON_EXIT_OR_EVICT
-+SingularityImage     = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest"
+###+SingularityImage     = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest"
 
 Log                   = XX-JOBNAME-XX.log

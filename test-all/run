@@ -1,0 +1,32 @@
+#!/bin/bash
+#---------------------------------------------------------------------------------------------------
+#
+# Script to run a simple test checking which flags are available of the given CPUs on the
+# workernode.
+#
+#---------------------------------------------------------------------------------------------------
+
+# show my running environment
+echo ""; echo " ## Environment"
+env
+
+# show the directory
+echo ""; echo " ## Directory"
+pwd
+echo ""
+ls
+
+# show the arguments
+echo ""; echo " ## Arguments"
+echo $@
+
+# now let's do what we came for
+echo ""; echo " ## Flags: cat /proc/cpuinfo | grep flags | sort -u"
+flags=`cat /proc/cpuinfo | grep flags | sort -u`
+host=`hostname`
+echo " $host: $flags"
+
+# now sleep to make those queue busy
+echo " $host: $flags"
+sleep 60
+
