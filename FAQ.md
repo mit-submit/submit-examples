@@ -1,9 +1,6 @@
-Frequently Asked Question catalog
-=================================
+# Frequently Asked Question catalog
 
-
-* Does the subMIT setup support "MPI"?
-
+### Does the subMIT setup support "MPI"?
 
 2 limitations to MPI
 
