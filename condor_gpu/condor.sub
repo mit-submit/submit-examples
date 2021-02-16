@@ -5,11 +5,14 @@ Universe     = vanilla
                transfer_output_files = ""
 	       GetEnv       = True
 	       input = /dev/null                       			
-	       output = /work/USERNAME/condor_gpu_test/$(Cluster)_$(Process).out
-               error = /work/USERNAME/condor_gpu_test/$(Cluster)_$(Process).err
-               log = /work/USERNAME/condor_gpu_test/$(Cluster)_$(Process).log
+	       output = /work/bmaier/gputest/submit-examples/condor_gpu/$(Cluster)_$(Process).out
+               error = /work/bmaier/gputest/submit-examples/condor_gpu/$(Cluster)_$(Process).err
+               log = /work/bmaier/gputest/submit-examples/condor_gpu/$(Cluster)_$(Process).log
                Requirements = BOSCOGroup == "bosco_reserve" && BOSCOCluster == "ce03.cmsaf.mit.edu" 
                arguments = $(Process)
+               +AccountingGroup = "group_cmsuser.bmaier"                    
+	       use_x509userproxy = 1             
+	       x509userproxy = /tmp/x509up_u2254
                OnExitHold = ( ExitBySignal == true ) || ( ExitCode != 0 )
                queue 1
 

@@ -2,7 +2,7 @@ cat .job.ad
 
 export CUDA_VISIBLE_DEVICES=0,1,2
 
-/usr/bin/python condor_tensorflow.py
+python condor_tensorflow.py
 
 echo ">>>>>>>>>>\n"
 echo ""
