@@ -33,3 +33,6 @@ rm *.err *.out *.log
 
 # submit it to condor
 condor_submit submit
+
+# LNS Computing Workshop for documentation
+https://indico.cern.ch/event/999848/
