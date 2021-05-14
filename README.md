@@ -1,3 +1,7 @@
+# README
+## Examples for *subMIT* cluster.
+
+~~~sh
 # Quick Documentation
 # ===================
 # 
@@ -36,3 +40,4 @@ condor_submit submit
 
 # LNS Computing Workshop for documentation
 https://indico.cern.ch/event/999848/
+~~~
