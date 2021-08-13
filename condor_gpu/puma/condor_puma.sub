@@ -12,5 +12,3 @@ Universe     = vanilla
                arguments = $(Process)       
                OnExitHold = ( ExitBySignal == true ) || ( ExitCode != 0 )
                queue 1
-
-
