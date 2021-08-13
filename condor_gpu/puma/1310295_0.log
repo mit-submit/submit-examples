@@ -1,0 +1,168 @@
+000 (1310295.000.000) 08/13 13:28:57 Job submitted from host: <18.4.134.251:9615?addrs=18.4.134.251-9615&noUDP&sock=2614219_5efe_3>
+...
+028 (1310295.000.000) 08/13 13:28:57 Job ad information event triggered.
+JOB_GLIDEIN_Name = "$$(GLIDEIN_Name:Unknown)"
+JOB_Site = "$$(GLIDEIN_Site:Unknown)"
+JOB_GLIDEIN_Gatekeeper = "$$(GLIDEIN_Gatekeeper:Unknown)"
+JOB_GLIDEIN_Entry_Name = "$$(GLIDEIN_Entry_Name:Unknown)"
+EventTime = "2021-08-13T13:28:57"
+TriggerEventTypeName = "ULOG_SUBMIT"
+SubmitHost = "<18.4.134.251:9615?addrs=18.4.134.251-9615&noUDP&sock=2614219_5efe_3>"
+Proc = 0
+Cluster = 1310295
+JOB_GLIDEIN_Factory = "$$(GLIDEIN_Factory:Unknown)"
+MyType = "SubmitEvent"
+Subproc = 0
+EventTypeNumber = 28
+JOB_GLIDEIN_Schedd = "$$(GLIDEIN_Schedd:Unknown)"
+JOB_GLIDEIN_ClusterId = "$$(GLIDEIN_ClusterId:Unknown)"
+JOB_GLIDEIN_ProcId = "$$(GLIDEIN_ProcId:Unknown)"
+JOB_GLIDEIN_Site = "$$(GLIDEIN_Site:Unknown)"
+JOB_GLIDEIN_SiteWMS = "$$(GLIDEIN_SiteWMS:Unknown)"
+JOB_GLIDEIN_SiteWMS_Slot = "$$(GLIDEIN_SiteWMS_Slot:Unknown)"
+JOB_GLIDEIN_SiteWMS_JobId = "$$(GLIDEIN_SiteWMS_JobId:Unknown)"
+JOB_GLIDEIN_SiteWMS_Queue = "$$(GLIDEIN_SiteWMS_Queue:Unknown)"
+TriggerEventTypeNumber = 0
+...
+001 (1310295.000.000) 08/13 13:29:38 Job executing on host: <18.12.4.131:43650?CCBID=18.4.112.27:11000%3faddrs%3d18.4.112.27-11000+[--1]-11000%26noUDP%26sock%3dcollector#4023721&PrivNet=T2GPU0003.CMSAF.MIT.EDU&addrs=18.12.4.131-43650+[--1]-43650&noUDP>
+...
+028 (1310295.000.000) 08/13 13:29:38 Job ad information event triggered.
+JOB_GLIDEIN_Name = "Unknown"
+JOB_Site = "MIT_CampusFactory"
+JOB_GLIDEIN_Gatekeeper = "Unknown"
+JOB_GLIDEIN_Entry_Name = "Unknown"
+EventTime = "2021-08-13T13:29:38"
+TriggerEventTypeName = "ULOG_EXECUTE"
+Proc = 0
+Cluster = 1310295
+JOB_GLIDEIN_Factory = "Unknown"
+MyType = "ExecuteEvent"
+ExecuteHost = "<18.12.4.131:43650?CCBID=18.4.112.27:11000%3faddrs%3d18.4.112.27-11000+[--1]-11000%26noUDP%26sock%3dcollector#4023721&PrivNet=T2GPU0003.CMSAF.MIT.EDU&addrs=18.12.4.131-43650+[--1]-43650&noUDP>"
+JOB_GLIDEIN_Site = "MIT_CampusFactory"
+Subproc = 0
+EventTypeNumber = 28
+JOB_GLIDEIN_Schedd = "Unknown"
+JOB_GLIDEIN_ClusterId = "Unknown"
+JOB_GLIDEIN_ProcId = "Unknown"
+JOB_GLIDEIN_SiteWMS = "Unknown"
+JOB_GLIDEIN_SiteWMS_Slot = "Unknown"
+JOB_GLIDEIN_SiteWMS_JobId = "Unknown"
+JOB_GLIDEIN_SiteWMS_Queue = "Unknown"
+TriggerEventTypeNumber = 1
+...
+006 (1310295.000.000) 08/13 13:29:47 Image size of job updated: 1
+	2  -  MemoryUsage of job (MB)
+	1804  -  ResidentSetSize of job (KB)
+...
+028 (1310295.000.000) 08/13 13:29:47 Job ad information event triggered.
+JOB_GLIDEIN_SiteWMS_Queue = "Unknown"
+JOB_GLIDEIN_SiteWMS_JobId = "Unknown"
+Size = 1
+JOB_GLIDEIN_SiteWMS_Slot = "Unknown"
+JOB_GLIDEIN_SiteWMS = "Unknown"
+JOB_GLIDEIN_Site = "MIT_CampusFactory"
+JOB_Site = "MIT_CampusFactory"
+JOB_GLIDEIN_ProcId = "Unknown"
+JOB_GLIDEIN_Entry_Name = "Unknown"
+JOB_GLIDEIN_Factory = "Unknown"
+JOB_GLIDEIN_ClusterId = "Unknown"
+JOB_GLIDEIN_Schedd = "Unknown"
+EventTypeNumber = 28
+MyType = "JobImageSizeEvent"
+TriggerEventTypeName = "ULOG_IMAGE_SIZE"
+EventTime = "2021-08-13T13:29:47"
+Proc = 0
+Cluster = 1310295
+MemoryUsage = 2
+Subproc = 0
+ResidentSetSize = 1804
+JOB_GLIDEIN_Gatekeeper = "Unknown"
+JOB_GLIDEIN_Name = "Unknown"
+TriggerEventTypeNumber = 6
+...
+006 (1310295.000.000) 08/13 13:32:26 Image size of job updated: 10761816
+	2  -  MemoryUsage of job (MB)
+	1804  -  ResidentSetSize of job (KB)
+...
+028 (1310295.000.000) 08/13 13:32:26 Job ad information event triggered.
+JOB_GLIDEIN_SiteWMS_Queue = "Unknown"
+JOB_GLIDEIN_SiteWMS_JobId = "Unknown"
+Size = 10761816
+JOB_GLIDEIN_SiteWMS_Slot = "Unknown"
+JOB_GLIDEIN_SiteWMS = "Unknown"
+JOB_GLIDEIN_Site = "MIT_CampusFactory"
+JOB_Site = "MIT_CampusFactory"
+JOB_GLIDEIN_ProcId = "Unknown"
+JOB_GLIDEIN_Entry_Name = "Unknown"
+JOB_GLIDEIN_Factory = "Unknown"
+JOB_GLIDEIN_ClusterId = "Unknown"
+JOB_GLIDEIN_Schedd = "Unknown"
+EventTypeNumber = 28
+MyType = "JobImageSizeEvent"
+TriggerEventTypeName = "ULOG_IMAGE_SIZE"
+EventTime = "2021-08-13T13:32:26"
+Proc = 0
+Cluster = 1310295
+MemoryUsage = 2
+Subproc = 0
+ResidentSetSize = 1804
+JOB_GLIDEIN_Gatekeeper = "Unknown"
+JOB_GLIDEIN_Name = "Unknown"
+TriggerEventTypeNumber = 6
+...
+005 (1310295.000.000) 08/13 13:32:27 Job terminated.
+	(1) Normal termination (return value 0)
+		Usr 0 00:11:39, Sys 0 00:00:47  -  Run Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Run Local Usage
+		Usr 0 00:11:39, Sys 0 00:00:47  -  Total Remote Usage
+		Usr 0 00:00:00, Sys 0 00:00:00  -  Total Local Usage
+	7694  -  Run Bytes Sent By Job
+	1335  -  Run Bytes Received By Job
+	7694  -  Total Bytes Sent By Job
+	1335  -  Total Bytes Received By Job
+	Partitionable Resources :    Usage  Request Allocated 
+	   Cpus                 :                 1         1 
+	   Disk (KB)            :  2183876        1   1289453 
+	   Memory (MB)          :        2     1024      1024 
+...
+028 (1310295.000.000) 08/13 13:32:27 Job ad information event triggered.
+SentBytes = 7694.0
+RequestMemory = 1024
+TotalLocalUsage = "Usr 0 00:00:00, Sys 0 00:00:00"
+RunRemoteUsage = "Usr 0 00:11:39, Sys 0 00:00:47"
+ReturnValue = 0
+ReceivedBytes = 1335.0
+JOB_GLIDEIN_Gatekeeper = "Unknown"
+TerminatedNormally = true
+JOB_GLIDEIN_Name = "Unknown"
+TotalRemoteUsage = "Usr 0 00:11:39, Sys 0 00:00:47"
+Cpus = 1
+JOB_GLIDEIN_SiteWMS_Queue = "Unknown"
+RunLocalUsage = "Usr 0 00:00:00, Sys 0 00:00:00"
+Memory = 1024
+EventTypeNumber = 28
+Subproc = 0
+RequestCpus = 1
+MyType = "JobTerminatedEvent"
+Disk = 1289453
+TriggerEventTypeName = "ULOG_JOB_TERMINATED"
+EventTime = "2021-08-13T13:32:27"
+Proc = 0
+TotalSentBytes = 7694.0
+Cluster = 1310295
+RequestDisk = 1
+DiskUsage = 2183876
+MemoryUsage = 2
+TotalReceivedBytes = 1335.0
+JOB_Site = "MIT_CampusFactory"
+JOB_GLIDEIN_Site = "MIT_CampusFactory"
+JOB_GLIDEIN_Entry_Name = "Unknown"
+JOB_GLIDEIN_Factory = "Unknown"
+JOB_GLIDEIN_ProcId = "Unknown"
+JOB_GLIDEIN_Schedd = "Unknown"
+JOB_GLIDEIN_ClusterId = "Unknown"
+JOB_GLIDEIN_SiteWMS = "Unknown"
+JOB_GLIDEIN_SiteWMS_Slot = "Unknown"
+JOB_GLIDEIN_SiteWMS_JobId = "Unknown"
+TriggerEventTypeNumber = 5
+...

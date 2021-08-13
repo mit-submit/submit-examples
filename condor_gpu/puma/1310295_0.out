@@ -1,0 +1,14 @@
+Start running.
+Cloning into 'grapple'...
+About to enter the singularity container. This is the content of the current folder: 
+/export/data1/condor/execute/dir_200140/tmp.gLIRDPhBLo/execute.18.12.4.131-200205/dir_202049
+total 20
+-rwxr-xr-x 1 bosco_reserve bosco_reserve 638 Aug 13 13:29 condor_exec.exe
+-rw-r--r-- 1 bosco_reserve bosco_reserve 129 Aug 13 13:29 _condor_stderr
+-rw-r--r-- 1 bosco_reserve bosco_reserve 220 Aug 13 13:29 _condor_stdout
+-rw-rw-r-- 1 bosco_reserve bosco_reserve 218 Aug 13 13:29 train_puma.sh
+-rw-rw-r-- 1 bosco_reserve bosco_reserve 657 Aug 13 13:29 train.yaml
+Starting to train
+/export/data1/condor/execute/dir_200140/tmp.gLIRDPhBLo/execute.18.12.4.131-200205/dir_202049
+Done training
+Done.
