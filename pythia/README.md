@@ -6,6 +6,7 @@ The package is very well documented (https://pythia.org/) and it seems superflue
 
 A one line example of how to install pythia is to use:
 
+       git clone https://github.com/mit-submit/submit-examples
        cd submit-examples/pythia
        source ./install.sh
 
