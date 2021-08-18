@@ -11,11 +11,11 @@ The workshop brought up a number of questions which we summarize here and will c
 
 There are many different versions of various packages available and distributed through our CVMFS file system. The c++ compiler in its gcc implementation in particular. Try out the following list command to see what is available:
 
-  ls /cvmfs/sft.cern.ch/lcg/contrib/gcc
+       ls /cvmfs/sft.cern.ch/lcg/contrib/gcc
 
 There are packaged versions for the various standard linux releases. To setup gcc version 11 for the present installation of our subMIT system you would do the following:
 
-  source /cvmfs/sft.cern.ch/lcg/contrib/gcc/11/x86_64-centos7/setup.sh
+       source /cvmfs/sft.cern.ch/lcg/contrib/gcc/11/x86_64-centos7/setup.sh
 
 ### Does the subMIT setup support "MPI"?
 
