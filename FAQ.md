@@ -7,6 +7,16 @@ The [github repository](https://github.com/mit-submit/submit-examples) summarize
 The workshop brought up a number of questions which we summarize here and will continue to maintain.
 
 
+### Can I use a different version of the c++ compiler (gcc)?
+
+There are many different versions of various packages available and distributed through our CVMFS file system. The c++ compiler in its gcc implementation in particular. Try out the following list command to see what is available:
+
+  ls /cvmfs/sft.cern.ch/lcg/contrib/gcc
+
+There are packaged versions for the various standard linux releases. To setup gcc version 11 for the present installation of our subMIT system you would do the following:
+
+  source /cvmfs/sft.cern.ch/lcg/contrib/gcc/11/x86_64-centos7/setup.sh
+
 ### Does the subMIT setup support "MPI"?
 
 The short answer to this question is no. There are two limitations to using MPI on the computing Tier-2 computing center at Bates. First, there is limited interconnectivity between worker nodes (typically 1 Gb/sec = "weak coupling") and secondly our batch system (HTCondor) does not support the allocation of several workernodes in parallel. Condor could be set up to use MPI but we don’t do this because MPI would not run efficiently.
