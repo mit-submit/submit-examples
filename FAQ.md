@@ -6,6 +6,11 @@ The [github repository](https://github.com/mit-submit/submit-examples) summarize
 
 The workshop brought up a number of questions which we summarize here and will continue to maintain.
 
+### How to get an account as an outside user
+
+To make login convenient and secure we allow login to the subMIT pool using ssh keys only. Users of submit can go to our submit portal to upload their ssh key (or a number of keys). Upload of ssh keys is secured through MIT touchstone authentication. This means users need to have an MIT account.
+
+It is very straight forward to obtain an MIT guest account if you do not have one. A sponsor - usually a faculty you are working with - can request a guest account for you. The information needed is the first, last name and the birthday. See the [sponsoring web page](https://ist.mit.edu/guest-accounts). Please note: the process has to be started by the sponsor! The response by MIT IS&T has been very quick in the past, we have so far received all account requests in less than 4 hours.
 
 ### Can I use a different version of the c++ compiler (gcc)?
 
