@@ -2,16 +2,14 @@
 # ----------------------------------------------------------------------------
 # Setup the right environment
 # ----------------------------------------------------------------------------
+PWD=`pwd`
+echo " Base directory is: $PWD"
 
-#source /cvmfs/sft.cern.ch/lcg/views/LCG_99/x86_64-centos7-gcc8-opt/setup.sh
-#source /cvmfs/sft.cern.ch/lcg/views/LCG_99/x86_64-centos7-gcc10-opt/setup.sh 
 source /cvmfs/sft.cern.ch/lcg/releases/LCG_97/GSL/2.5/x86_64-centos7-gcc9-opt/GSL-env.sh 
 
 # ----------------------------------------------------------------------------
 # pythia
 # ----------------------------------------------------------------------------
-
-PWD=`pwd`
 
 # Install 8303 release (https://pythia.org/)
 
@@ -67,11 +65,3 @@ then
     make
     cd ..
 fi
-
-
-# ----------------------------------------------------------------------------
-# TEST
-# ----------------------------------------------------------------------------
-cd trajectum-1.1/src
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:${PWD}/pythia8303/lib"
-./collide ../data/collisionpPb.par
