@@ -1,5 +1,7 @@
-YOU NEED TO CHANGE THE EXCECUTABLE DIR IN:
+YOU NEED TO CHANGE THE EXCECUTABLE DIR AS WELL AS THE CONDOR OUTPUT IN:
 -> submit.condor
+
+mkdir scratch output
 
 We want to run python_script.py which ouputs files in the output/ directory (outfile_XA.txt).
 
