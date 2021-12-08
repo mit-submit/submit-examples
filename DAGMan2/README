@@ -2,6 +2,8 @@ YOU NEED TO CHANGE THE EXCECUTABLE DIR IN TWO FILES, see:
 -> submit.condor
 -> submit2.condor
 
+mkdir scratch output
+
 We want to run python_script.py which ouputs files in the output/ directory (outfile_XA.txt). 
 After that job is completed, we want to have python_script2.py, which simply opens the output
 files, multiplies the number inside by two, then makes a new file (outfile_XB.txt).  
