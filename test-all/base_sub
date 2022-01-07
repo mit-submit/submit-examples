@@ -1,9 +1,47 @@
 # Submit description file for test_all program
 #----------------------------------------------
 Executable            = run
-#Requirements          = regexp("T2.*", MACHINE)
+# EAPS
+Requirements          = ( BOSCOCluster == "eofe8.mit.edu" )
+# T2 Requirements          = ( BOSCOCluster == "ce03.cmsaf.mit.edu" )
+# T3 Requirements          = ( BOSCOCluster == "t3serv008.mit.edu" )
+# T2+T3 Requirements          = ( BOSCOCluster == "t3serv008.mit.edu" ||  BOSCOCluster == "ce03.cmsaf.mit.edu" )
+
+## basic general
+Request_Memory          = 2.0 GB
+Request_Disk            = 3 GB
+Request_Cpus            = 1
+#Notification            = Error
+#Rank                    = Mips
+#GetEnv                  = False
+#Input                   = /dev/null
+#should_transfer_files   = YES
+#when_to_transfer_output = ON_EXIT
+#on_exit_hold            = (ExitBySignal == True) || (ExitCode != 0)
+
+## MAX_TRANSFER_INPUT_MB
+
+# make sure we get a reasonable slot
+#+RequestMemory = 2000
+##+MaxWallTimeMins = 480
+
+## CMS requirements
+#use_x509userproxy       = True
+#+AcctGroup              = "analysis"
+#+AccountingGroup        = "analysis.paus"
+#
+## OSG registered project name
+#+ProjectName            = "CpDarkMatterSimulation"
+
+
+
+#Requirements          = BOSCOCluster == "t3serv008.mit.edu"
+#Requirements          = regexp("T2BAT0493.*", MACHINE)
 Universe              = vanilla
-GetEnv                = True
+GetEnv                = False
+#+SingularityImage     = "/cvmfs/eic.opensciencegrid.org/singularity/rhic_sl7_ext"
+#+SingularityImage     = "/cvmfs/unpacked.cern.ch/registry.hub.docker.com/coffeateam/coffea-dask:latest"
+
 #initialdir            = /tmp
 #transfer_input_files  = input
 #should_transfer_files = YES

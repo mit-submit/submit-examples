@@ -5,7 +5,9 @@
 PWD=`pwd`
 echo " Base directory is: $PWD"
 
-source /cvmfs/sft.cern.ch/lcg/releases/LCG_97/GSL/2.5/x86_64-centos7-gcc9-opt/GSL-env.sh 
+# setting up all the good links (boost and gsl for gcc9)
+source /cvmfs/sft.cern.ch/lcg/releases/LCG_97/Boost/1.72.0/x86_64-centos7-gcc9-opt/Boost-env.sh
+source /cvmfs/sft.cern.ch/lcg/releases/LCG_97/GSL/2.5/x86_64-centos7-gcc9-opt/GSL-env.sh
 
 # ----------------------------------------------------------------------------
 # pythia
@@ -13,9 +15,10 @@ source /cvmfs/sft.cern.ch/lcg/releases/LCG_97/GSL/2.5/x86_64-centos7-gcc9-opt/GS
 
 # Install 8303 release (https://pythia.org/)
 
-if ! [ -e "pythia8303.tgz" ]
+if ! [ -d "pythia8303" ]
 then
-  wget https://pythia.org/download/pythia83/pythia8303.tgz
+
+  wget --no-check-certificate https://pythia.org/download/pythia83/pythia8303.tgz
 
   # untar the software package
   tar fzx pythia8303.tgz
@@ -44,7 +47,7 @@ then
   mkdir build
   cd    build
   # Careful, it looks like root and HepMc are not working properly
-  cmake .. -DUSE_HEPMC=OFF -DUSE_ROOT=OFF -DPythia_CONFIG_EXECUTABLE=${PWD}/pythia8303/bin/pythia8-config
+  cmake3 .. -DUSE_HEPMC=OFF -DUSE_ROOT=OFF -DPythia_CONFIG_EXECUTABLE=${PWD}/pythia8303/bin/pythia8-config
   make
   cd ../..
 fi
