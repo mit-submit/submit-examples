@@ -35,7 +35,8 @@ if [ ".$?" == "0" ]
 then
   singularity --version
 else
-  echo " singularity not found"
+  echo " ERROR - singularity not found"
+fi
 
 # now let's do what we came for
 echo ""; echo " ## Flags: cat /proc/cpuinfo | grep flags | sort -u"
