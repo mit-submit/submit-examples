@@ -1,0 +1,50 @@
+Clear task state
+  Scheduler at:     tcp://18.12.2.18:6820
+  dashboard at:          18.12.2.18:16128
+Receive client connection: Client-1287b564-7f3e-11ec-a926-000af7bd3c78
+Run out-of-band function 'lambda'
+Scheduler closing...
+Scheduler closing all comms
+Clear task state
+  Scheduler at:     tcp://18.12.2.18:6820
+  dashboard at:           18.12.2.18:4309
+Receive client connection: Client-b929289d-7f3e-11ec-9ddc-000af7bd3c78
+Run out-of-band function 'lambda'
+Run out-of-band function 'lambda'
+Clear task state
+  Scheduler at:     tcp://18.12.2.18:6820
+  dashboard at:          18.12.2.18:28714
+Receive client connection: Client-19363a6a-7f42-11ec-8200-000af7bd3c78
+Run out-of-band function 'lambda'
+Scheduler closing...
+Scheduler closing all comms
+Clear task state
+  Scheduler at:     tcp://18.12.2.18:6820
+  dashboard at:           18.12.2.18:2568
+Receive client connection: Client-63ea1b15-7f7a-11ec-863d-000af7bd3c78
+Run out-of-band function 'lambda'
+Clear task state
+  Scheduler at:     tcp://18.12.2.18:6820
+  dashboard at:           18.12.2.18:4676
+Receive client connection: Client-049c9cd6-7f82-11ec-935f-000af7bd3c78
+Run out-of-band function 'lambda'
+Scheduler closing...
+Scheduler closing all comms
+Clear task state
+  Scheduler at:     tcp://18.12.2.18:6820
+  dashboard at:          18.12.2.18:30042
+Receive client connection: Client-b0c78c9d-7f83-11ec-9314-000af7bd3c78
+Scheduler closing...
+Scheduler closing all comms
+Clear task state
+  Scheduler at:     tcp://18.12.2.18:6820
+  dashboard at:          18.12.2.18:29800
+Receive client connection: Client-a09854e8-7f88-11ec-be83-000af7bd3c78
+Run out-of-band function 'lambda'
+Scheduler closing...
+Scheduler closing all comms
+Clear task state
+  Scheduler at:     tcp://18.12.2.18:6820
+  dashboard at:           18.12.2.18:7045
+Receive client connection: Client-533f1ae9-7f8b-11ec-b0a6-000af7bd3c78
+Run out-of-band function 'lambda'
