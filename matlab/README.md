@@ -1,12 +1,7 @@
 # Intro to Matlab
 
-Options for both HTCondor and Slurm
+Running for Slurm. Matlab can be accessed from SubMIT machines and this shows a simple example on how to scale matlab work using Slurm
 
-## Running HTCondor
-
-```
-condor_submit submit
-```
 
 ## Running Slurm
 
