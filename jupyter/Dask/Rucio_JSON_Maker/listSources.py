@@ -1,4 +1,5 @@
 #! /usr/bin/env python
+#Created by Benedikt Maier to create JSON file input with the proper xrootd redirector
 
 from __future__ import print_function
 
