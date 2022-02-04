@@ -37,7 +37,7 @@ conda install dask
 pip install vector
 ```
 
-## If you want to reform the samples.json (Not required)
+## If you want to reform the samples.json in Dask example (Not required)
 
 This is an easy place to start for studies. If you want to modify this, there are only a few changes that need to be done. To make an analysis you need to modify the code in the Simple_Process. In the processor you can control the histograms that you want to write out as well as modifying the code to analyze the NanoAOD files. 
 
