@@ -1,11 +1,11 @@
 # Submit description file for test_all program
 #----------------------------------------------
 Executable            = run
-# EAPS
-Requirements          = ( BOSCOCluster == "eofe8.mit.edu" )
+# EAPS Requirements          = ( BOSCOCluster == "eofe8.mit.edu" )
 # T2 Requirements          = ( BOSCOCluster == "ce03.cmsaf.mit.edu" )
 # T3 Requirements          = ( BOSCOCluster == "t3serv008.mit.edu" )
-# T2+T3 Requirements          = ( BOSCOCluster == "t3serv008.mit.edu" ||  BOSCOCluster == "ce03.cmsaf.mit.edu" )
+# T2+T3
+Requirements          = ( BOSCOCluster == "t3serv008.mit.edu" ||  BOSCOCluster == "ce03.cmsaf.mit.edu" )
 
 ## basic general
 Request_Memory          = 2.0 GB
