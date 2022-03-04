@@ -11,6 +11,7 @@ with open("submit","a") as fH:
     for i in range(min,max+1,1):
         id = str(i)
         #fH.write("transfer_output_files = test-all_%s.result\n"%(id))
+        fH.write("Arguments             = %s\n"%(id))
         fH.write("Output                = test-all_%s.out\n"%(id))
         fH.write("Error                 = test-all_%s.err\n"%(id))
         fH.write("Queue\n")
