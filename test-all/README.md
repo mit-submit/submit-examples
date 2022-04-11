@@ -4,7 +4,7 @@ Simple setup to run a lightweight test pf relevant components.
 
 ### Installation
 
-    clone git://github.com/mit-submit/submit-examples
+    git clone https://github.com/mit-submit/submit-examples
 
 ### Generate a submit file (./submit) of jobs 1 to 10
 
