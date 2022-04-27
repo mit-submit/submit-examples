@@ -1,0 +1,2 @@
+BadNodes = t3desk014.mit.edu
+Requirements = ( $(Requirements) && ( stringListIMember(Machine,"$(BadNodes)") == False) )

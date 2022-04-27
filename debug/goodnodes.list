@@ -1,0 +1,3 @@
+#GoodNodes = t2bat0240.cmsaf.mit.edu t2bat0461.cmsaf.mit.edu
+GoodNodes = t2bat0225.cmsaf.mit.edu t2bat0240.cmsaf.mit.edu t2bat0461.cmsaf.mit.edu
+Requirements = ( $(Requirements) && ( stringListIMember(Machine,"$(GoodNodes)") == True) )

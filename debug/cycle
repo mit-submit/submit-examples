@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# make sure condor jobs are done
+test=`condor_q -format "%s\n" Out|grep test-all|wc -l`
+
+if [ "$test" == "0" ] && [ ".$1" == "." ]
+then
+
+  # update our database
+  echo " Condor jobs are complete. Updating database."
+  cat test-all*out summary.flags 2> /tmp/trash.bak |grep ': flags'|sort -u > /tmp/flags
+  mv  /tmp/flags   summary.flags
+  cat summary.flags | grep    sse4 > summary.good
+  cat summary.flags | grep -v sse4 > summary.bad
+
+  # cleanup
+  rm test-all.log test-all_*err test-all_*out
+
+  # one more time
+  echo " Submitting new batch of tests."
+  condor_submit ./submit
+
+else
+  # harvest
+  cat test-all*out summary.flags |grep ': flags'|sort -u > /tmp/flags
+  mv  /tmp/flags   summary.flags
+  cat summary.flags | grep    sse4 > summary.good
+  cat summary.flags | grep -v sse4 > summary.bad
+  wc  summary.*
+  echo " Still running ($test); wait!"
+fi
+
+

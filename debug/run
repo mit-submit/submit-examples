@@ -1,0 +1,77 @@
+#!/bin/bash
+#---------------------------------------------------------------------------------------------------
+#
+# Script to debug functionality of the workernode.
+#
+#---------------------------------------------------------------------------------------------------
+
+# show the executing script
+echo ""; echo " ## Executing"
+echo $0
+
+#echo Directory: `dirname $0`
+#cd `dirname $0`
+
+# show the arguments
+echo ""; echo " ## Arguments"
+echo $@
+jobid=$1
+
+# show the directory
+echo ""; echo " ## Directory"
+pwd
+echo ""
+ls -lhrt
+
+# show the directory
+echo ""; echo " ## Me?"
+id
+echo ""
+
+# show cvmfs
+echo ""; echo " ## List root (/)"
+ls -l /
+echo ""; echo " ## Load CMS default setup"
+ls -lhrt /cvmfs/cms.cern.ch/cmsset_default.sh
+source   /cvmfs/cms.cern.ch/cmsset_default.sh
+
+# show singularity
+echo ""; echo " ## Singularity"
+which singularity
+if [ ".$?" == ".0" ]
+then
+  singularity --version
+else
+  echo " ERROR - singularity not found"
+fi
+
+# now let's do what we came for
+echo ""; echo " ## Flags: cat /proc/cpuinfo | grep flags | sort -u"
+flags=`cat /proc/cpuinfo | grep flags | sort -u`
+host=`hostname`
+echo " $host: $flags"
+
+# show my running environment
+echo ""; echo " ## Environment"
+env | sort -u
+
+## now sleep to make those queue busy
+#echo ""; echo " ## Sleep 20"
+#sleep 20
+
+# check whether conditions are met to create the output file
+if [ -e "Public.tgz" ]
+then
+  tar fzx Public.tgz
+  ls -lhrt
+  echo "All looks good!" > debug_${jobid}.result
+  echo "All looks good!"
+  ls -lhrt
+  input_file=`cat input_file.list | sed -n "${jobid}p"`
+  export X509_USER_PROXY=`echo ./x509up_*`
+  echo xrdcp root://t3serv017.mit.edu/$input_file /tmp/`basename $input_file`
+  xrdcp root://t3serv017.mit.edu/$input_file /tmp/`basename $input_file`
+  echo " RC: $?"
+else
+  echo " ERROR -- this job failed"
+fi

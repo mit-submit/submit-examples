@@ -1,0 +1,41 @@
+# Submit description file for the debug program
+#----------------------------------------------
+Executable = run
+# EAPS Requirements = ( BOSCOCluster == "eofe8.mit.edu" )
+# T2 Requirements = ( BOSCOCluster == "ce03.cmsaf.mit.edu" )
+# T3 Requirements = ( BOSCOCluster == "t3serv008.mit.edu" )
+# T2+T3
+Requirements = ( BOSCOCluster == "t3serv008.mit.edu" ||  BOSCOCluster == "ce03.cmsaf.mit.edu" )
+
+# basic general
+Request_Memory = 2.0 GB
+Request_Disk = 3 GB
+Request_Cpus = 1
+Notification = Never
+Universe = vanilla
+GetEnv = False
+Log = debug.log
+
+# define files to be copied to the worker
+transfer_input_files = /tmp/x509up_u21390, input_file.list, Public.tgz
+
+## exclude bad nodes
+#include : badnodes.list 
+
+## select only good nodes
+#include : goodnodes.list 
+
+## Use singularity
+#+SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest"
+#+SingularityImage = "/cvmfs/eic.opensciencegrid.org/singularity/rhic_sl7_ext"
+#+SingularityImage = "/cvmfs/unpacked.cern.ch/registry.hub.docker.com/coffeateam
+
+## CMS requirements
+#use_x509userproxy = True
+#+RequestMemory = 2000
+#+MaxWallTimeMins = 480
+#+AcctGroup = "analysis"
+#+AccountingGroup = "analysis.paus"
+
+## OSG registered project name
+#+ProjectName = "CpDarkMatterSimulation"
