@@ -72,6 +72,7 @@ then
   echo xrdcp root://t3serv017.mit.edu/$input_file /tmp/`basename $input_file`
   xrdcp root://t3serv017.mit.edu/$input_file /tmp/`basename $input_file`
   echo " RC: $?"
+  rm -f /tmp/`basename $input_file`
 else
   echo " ERROR -- this job failed"
 fi
