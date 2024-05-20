@@ -1,0 +1,15 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/pytorch:22.09-py3
+Stage: build
+
+%post
+pip3 install websockets
+pip3 install bilby==2.0.0 lightning==1.8.6 pyro-ppl==1.8.0
+
+%runscript
+#!/bin/bash
+exec "$@"
+
+%labels
+Author Deep Chatterjee
+Version v0.0.0
