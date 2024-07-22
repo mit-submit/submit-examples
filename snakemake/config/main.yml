@@ -1,0 +1,8 @@
+# --------------------------------------------------------------------
+# Snakemake configuration to run the full analysis pipeline.
+# author: Blaise Delaney
+# email: blaise.delaney at cern.ch
+# --------------------------------------------------------------------
+
+# data taking years considered in the example. Keep it simple to ease visualisations of the workflow
+years: ["2012", "2018"] # you can decouple these between, say, data_years and mc_years to process different samples
