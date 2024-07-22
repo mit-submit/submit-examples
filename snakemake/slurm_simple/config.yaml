@@ -1,0 +1,22 @@
+cluster:
+  mkdir -p slurm_logs/{rule} &&
+  sbatch
+    --partition={resources.partition}
+    --job-name=smk-{rule}-{wildcards}
+    --output=slurm_logs/{rule}/{rule}-{wildcards}-%j.out
+    --error=slurm_logs/{rule}/{rule}-{wildcards}-%j.err
+    --time={resources.time}
+    --account=blaised
+    --mem={resources.mem_mb}
+default-resources:
+  - partition=submit
+  - time="48:00:00"
+  - mem_mb=2000
+restart-times: 1
+max-status-checks-per-second: 1
+latency-wait: 3600
+jobs: 5000
+keep-going: True
+rerun-incomplete: True
+printshellcmds: True
+use-conda: True
