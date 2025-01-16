@@ -1,0 +1,41 @@
+##################################################################
+# Submission script to run Generic2_n in GREMLIN package on OSG
+# Call as follows:
+#
+# condor_submit RunGeneric2_n_osg.sub ei=i ni=n
+#
+# This script assumes that all of the data files used as input
+# Generic2_n are in the directory e_i, where i is an integer in the
+# range from 0 to some maximum.  Each value of i corresponds to a
+# particular eccentricity "row" in the grid of orbits.  Run is
+# done for radial harmonic index n.
+#
+# Scott A. Hughes, 16 Jan 2025
+#
+##################################################################
+#
+# Note that we set the initial directory to e_i.  The input file
+# run_j.in is taken from there (with j taken from the process ID);
+# stdout, stderr, and the logs are all written to e_i/logs
+#
+# Note that request_disk is based on the typical maximum for the
+# currently being done ... can easily get larger in different
+# parts of the parameter space.
+#
+##################################################################
+
+universe                = vanilla
+request_disk            = 4096
+executable              = Generic2_n.sh
+arguments               = run_$(ProcID).in $(ni)
+initialdir              = e_$(ei)
+Requirements            = HAS_SINGULARITY == TRUE
+should_transfer_files   = YES
+transfer_input_files    = /home/submit/sahughes/GremMakeDat/bin/Generic2_n,run_$(ProcID).in
+output                  = logs/$(ClusterId).$(ProcID).out
+error                   = logs/$(ClusterId).$(ProcID).err
+log                     = logs/$(ClusterId).$(ProcID).log
+when_to_transfer_output = ON_EXIT
++SingularityImage       = "/cvmfs/singularity.opensciencegrid.org/htc/rocky:9"
++ProjectName            = "MIT_submit"
+queue 54
