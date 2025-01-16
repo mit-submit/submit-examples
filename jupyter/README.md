@@ -2,5 +2,5 @@
 
 This directory contains a couple of simple examples on how to use JupyterHub.
 
-https://submit00.mit.edu/jupyter/
+https://submit.mit.edu/jupyter
 
