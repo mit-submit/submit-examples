@@ -1,0 +1,15 @@
+universe = vanilla
+executable = first_test.sh
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = first_test_inputs.tar.gz
+transfer_output_files = first_test_output_$(Process).txt
+output = log/$(Process).stdout
+error = log/$(Process).stderr
+log = log/$(Process).log
++REQUIRED_OS = "rhel7"
++SingularityImage = "/cvmfs/singularity.opensciencegrid.org/opensciencegrid/osgvo-el7:latest"
++ProjectName            = "MIT_submit"
+rank = Mips
+arguments = "$(Process)"
+queue 10
