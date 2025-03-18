@@ -1,0 +1,30 @@
+submit08.mit.edu:rank0.ring_c: Unable to alloc recv buffer MR on mlx5_0: Cannot allocate memory
+submit08.mit.edu:rank0.ring_c: Unable to allocate UD recv buffer pool
+submit08.mit.edu:rank0.ring_c: Unable to alloc recv buffer MR on mlx5_0: Cannot allocate memory
+submit08.mit.edu:rank0.ring_c: Unable to allocate UD recv buffer pool
+submit08.mit.edu:rank0.ring_c: Unable to alloc recv buffer MR on mlx5_0: Cannot allocate memory
+submit08.mit.edu:rank0.ring_c: Unable to allocate UD recv buffer pool
+submit08.mit.edu:rank1.ring_c: Unable to alloc recv buffer MR on mlx5_0: Cannot allocate memory
+submit08.mit.edu:rank1.ring_c: Unable to allocate UD recv buffer pool
+submit08.mit.edu:rank1.ring_c: Unable to alloc recv buffer MR on mlx5_0: Cannot allocate memory
+submit08.mit.edu:rank1.ring_c: Unable to allocate UD recv buffer pool
+submit08.mit.edu:rank1.ring_c: Unable to alloc recv buffer MR on mlx5_0: Cannot allocate memory
+submit08.mit.edu:rank1.ring_c: Unable to allocate UD recv buffer pool
+submit08.mit.edu:rank0.ring_c: Unable to alloc recv buffer MR on mlx5_0: Cannot allocate memory
+submit08.mit.edu:rank0.ring_c: Unable to allocate UD recv buffer pool
+submit08.mit.edu:rank1.ring_c: Unable to alloc recv buffer MR on mlx5_0: Cannot allocate memory
+submit08.mit.edu:rank1.ring_c: Unable to allocate UD recv buffer pool
+Process 0 sending 10 to 1, tag 201 (2 processes in ring)
+Process 0 sent to 1
+Process 0 decremented value: 9
+Process 0 decremented value: 8
+Process 0 decremented value: 7
+Process 0 decremented value: 6
+Process 0 decremented value: 5
+Process 0 decremented value: 4
+Process 0 decremented value: 3
+Process 0 decremented value: 2
+Process 0 decremented value: 1
+Process 0 decremented value: 0
+Process 0 exiting
+Process 1 exiting
